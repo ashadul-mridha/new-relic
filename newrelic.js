@@ -10,11 +10,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['backend_a8_api'],
+  app_name: [process.env.NEW_RELIC_APP_NAME || 'nest-test-app-with-file'],
   /**
    * Your New Relic license key.
    */
-  license_key: 'a21b7a47eefc23e09ab9ae2d495cad3cFFFFNRAL',
+  license_key: process.env.NEW_RELIC_LICENSE_KEY || '0f817ea8ab650e882104acfe414dc0b2FFFFNRAL',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
